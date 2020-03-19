@@ -38,9 +38,8 @@ if(isset($_GET["id"])) {
 <a href="index.php"> Return </a>
 <?php
 foreach($series as $row) { ?>
-    <h1> <?php
-        echo $row["title"] . ' - ';
-        echo $row["rating"] . ' ';
+    <h1> <?php echo $row["title"] . ' - '; ?> </h1>
+    <h1> <?php echo $row["rating"]; ?> </h1>
         ?>
     </h1>
     <form action="seriesUpdate.php" method="POST">
