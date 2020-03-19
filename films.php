@@ -1,5 +1,4 @@
 <?php
-// @codingStandardsIgnoreStart
 $host = '127.0.0.1';
 $db   = 'netland';
 $user = 'root';
@@ -62,9 +61,6 @@ foreach($movies as $row) { ?>
 
         <input type="submit" name="update" value="Update">
     </form>
-<?php
-} 
-// @codingStandardsIgnoreEnd
-?>
+<?php } ?>
 </body>
 </html>
