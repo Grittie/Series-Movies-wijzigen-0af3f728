@@ -37,12 +37,9 @@ if(isset($_GET["id"])) {
 <a href="index.php"> Return </a>
 <?php
 foreach($movies as $row) { ?>
-    <h1> <?php
-        echo $row["title"] . ' - ';
-        echo $row["duur"] . ' ';
-        echo "minutes";
-        ?>
-    </h1>
+    <h1> <?php echo $row["title"] . ' - '; ?> </h1>
+    <h1> <?php  echo $row["duur"] . ' '; ?> </h1>
+    <h1> minutes </h1>
 
     <form action="filmsUpdate.php" method="POST">
         <input type="hidden" name="id" value="<?php echo $_GET["id"] ?>">
