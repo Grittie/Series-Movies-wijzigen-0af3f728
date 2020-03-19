@@ -1,4 +1,5 @@
 <?php
+// phpcs:ignoreFile
 $host = '127.0.0.1';
 $db   = 'netland';
 $user = 'root';
@@ -46,11 +47,11 @@ foreach($series as $row) { ?>
         <input type="hidden" name="id" value="<?php echo $_GET["id"] ?>">
 
         <p>Title: <input type="text" name="titleUpdate" value="<?php echo $row["title"] ?>"></p>
-        <p>Awards: <input type="text" name="awardUpdate" value="<?php echo $row["has_won_awards"] ?>"></p>
-        <p>Rating: <input type="text" name="ratingUpdate" value="<?php echo $row["rating"] ?>"></p>
+        <p>Awards: <input type="number" name="awardUpdate" value="<?php echo $row["has_won_awards"] ?>"></p>
+        <p>Rating: <input type="number" name="ratingUpdate" value="<?php echo $row["rating"] ?>"></p>
         <p>Country: <input type="text" name="countryUpdate" value="<?php echo $row["country"] ?>"><p>
         <p>Language: <input type="text" name="languageUpdate" value="<?php echo $row["language"] ?>"></p>
-        <p>Seasons: <input type="text" name="seasonUpdate" value="<?php echo $row["seasons"] ?>"></p>
+        <p>Seasons: <input type="number" name="seasonUpdate" value="<?php echo $row["seasons"] ?>"></p>
 
         <p><textarea name="descriptionUpdate" cols="60" rows="15"><?php echo $row["description"] ?></textarea></p>
 

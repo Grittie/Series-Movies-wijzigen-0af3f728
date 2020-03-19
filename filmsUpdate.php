@@ -1,4 +1,5 @@
 <?php
+// phpcs:ignoreFile
 $host="localhost";
 $db = "netland";
 $username = "root";

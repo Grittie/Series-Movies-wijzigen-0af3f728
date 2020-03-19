@@ -1,4 +1,5 @@
 <?php
+// phpcs:ignoreFile
 $host="localhost";
 $db = "netland";
 $username = "root";
@@ -29,20 +30,18 @@ if (isset($_POST["id"])) {
     $descriptionUpdate = $_POST["descriptionUpdate"];
 
     $pdo->query(
-        "UPDATE series 
-        SET 
-        title = '$titleUpdate',
-        has_won_awards = $awardUpdate,
-        rating = $ratingUpdate,
-        country = '$countryUpdate',
-        language = '$languageUpdate',
-        seasons = $seasonUpdate,
-        description = '$descriptionUpdate'
+        "UPDATE series
+        SET title = '$titleUpdate',
+            rating ='$ratingUpdate',
+            seasons ='$seasonUpdate',
+             has_won_awards = $awardUpdate,
+            description = '$descriptionUpdate',
+            country = '$countryUpdate',
+            language = '$languageUpdate'
         WHERE id = $id"
     );
 }
-
-header("Refresh: 1; url=series.php?id=$id");
+header("Refresh: 0; url=series.php?id=$id");
 exit("This will only take a second...");
 
 ?>
